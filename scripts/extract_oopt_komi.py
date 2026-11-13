@@ -1,0 +1,15 @@
+﻿import geopandas as gpd, pandas as pd
+o = gpd.read_file('data/oopt_raw.geojson')
+k = gpd.read_file('data/osm/regions.gpkg')
+komi = k[k['name_en']=='Komi Republic'].to_crs(4326)
+print(komi.total_bounds, len(komi))
+komi_u = komi.geometry.union_all()
+o = o[o.intersects(komi_u)].copy()
+print('in komi', len(o))
+o['area_km2'] = o.to_crs('+proj=aea +lat_1=50 +lat_2=70 +lat_0=60 +lon_0=55 +datum=WGS84').area/1e6
+print(o['CATEGORY'].value_counts().to_string())
+print(o['SIG'].value_counts().to_string())
+print(o['STATUS'].value_counts().to_string())
+print(o[['name','CATEGORY','SIG','STATUS','area_km2']].sort_values('area_km2',ascending=False).head(20).to_string())
+o.drop(columns=[c for c in ['TITLE'] if c in o]).to_file('data/oopt_komi.geojson', driver='GeoJSON')
+print('saved', len(o))
