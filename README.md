@@ -3,6 +3,12 @@
 **#30DayMapChallenge 2026 · Day 13 · Interactions**
 Республика Коми · ветровалы 1984–2026 в рельефе, лесах и на охраняемых территориях.
 
+🔗 **Живая карта:** https://nadiopt-cell.github.io/komi-wind/
+# Ветер × рельеф × лес
+
+**#30DayMapChallenge 2026 · Day 13 · Interactions**
+Республика Коми · ветровалы 1984–2026 в рельефе, лесах и на охраняемых территориях.
+
 ---
 
 ## Что в папке
@@ -94,3 +100,4 @@ python scripts/make_gif.py          # GIF
 
 Данные: Copernicus DEM © ESA, Copernicus Forest Type © VITO/CLMS, ООПТ © AARI 2022,
 © OpenStreetMap contributors, Natural Earth.
+
