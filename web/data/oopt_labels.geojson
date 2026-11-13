@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"name": "Югыд Ва"}, "geometry": {"type": "Point", "coordinates": [59.35, 64.15]}}, {"type": "Feature", "properties": {"name": "Печоро-Илычский"}, "geometry": {"type": "Point", "coordinates": [58.55, 62.05]}}]}
